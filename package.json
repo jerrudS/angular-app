@@ -2,10 +2,10 @@
   "name": "angular-app",
   "version": "1.0.0",
   "description": "angular application",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "angular-chart.js": "^1.1.1",
-    "chart.js": "^2.7.0",
+    "chart.js": "^2.7.0"
   },
   "devDependencies": {
     "http-server": "^0.10.0"
