@@ -1,31 +1,56 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html ng-app>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <meta charset="utf-8">
-    <title>Angular App</title>
+    <title>Big Ten Schools</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
-    <script src="chart.js"></script>
+    <!-- <script type="text/javascript" src="chart.js"></script> -->
+    <script src="app.js"></script>
   </head>
   <body>
     <div>
-      <p>Enter Your Name: <input type="text" ng-model="name"/></p>
+      <p>Enter Your Name: <input type="text" class="input" ng-model="name"/></p>
       <p>Hello <span ng-bind="name"></span></p>
     </div>
     <div>
       <table border="0">
         <tr>
-          <td><input type="checkbox"  ng-model="enableDisableButton">Disable Button</td>
-          <td><button ng-disabled="enableDisableButton">Click Me!</button></td>
+          <td><input type="checkbox" ng-model="enableDisableButton">Disable Button</td>
+          <td><button type="button" class="btn btn-primary" ng-disabled="enableDisableButton">Click Me!</button></td>
         </tr>
         <tr>
           <td><input type="checkbox" ng-model="showHide">Show Button</td>
-          <td><button ng-show="showHide">Click Me!</button></td>
+          <td><button type="button" class="btn btn-primary" ng-show="showHide">Click Me!</button></td>
+        </tr>
+        <tr>
+          <td><p>Total Click: {{ clickCounter }}</p></td>
+          <td><button type="button" class="btn btn-primary" ng-click="clickCounter = clickCounter + 1">Click Me!</button></td>
         </tr>
       </table>
     </div>
-    <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options">
-    </canvas>
+
+    <div class="table-responsive" ng-controller="dataController">
+      <table class="table table-bordered">
+        <thead>
+          <tr class="info">
+            <th>School Name</th>
+            <th>Location</th>
+            <th>Logo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="school in schools">
+            <td>{{ school.name }}</td>
+            <td>{{ school.location }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options">
+    </canvas> -->
   </body>
 </html>
