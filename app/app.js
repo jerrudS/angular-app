@@ -2,6 +2,12 @@
 
 var app = angular.module("myModule", []);
 
+app.controller("alertController", function() {
+  document.addEventListener("load", function(event) {
+    alert("Enter your name: ")
+  });
+});
+
 app.controller("dataController", function($scope) {
   var schoolInfo = [
     { name:'University of Illinois', location:'Champaign, IL', logo:'images/illinois.png' },

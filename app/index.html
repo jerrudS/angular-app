@@ -4,18 +4,22 @@
     <meta charset="utf-8">
     <title>Big Ten Schools</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body ng-controller="dataController">
-
     <div>
+      <h1 id="title">Big Ten Schools</h1>
+      <h2 id="description">"The Official Angular App of the Big Ten"</h2>
+    </div>
+    <div class="welcome">
       <p>Enter Your Name: <input type="text" class="input" ng-model="name"/></p>
       <p>Hello <span ng-bind="name"></span>, welcome to the Big Ten Schools App!</p>
     </div>
     <div>
-      <table border="0">
+      <!-- <table border="0">
         <tr>
           <td><input type="checkbox" ng-model="enableDisableButton">Disable Button</td>
           <td><button type="button" class="btn btn-primary" ng-disabled="enableDisableButton">Click Me!</button></td>
@@ -29,7 +33,7 @@
           <td><button type="button" class="btn btn-primary" ng-click="clickCounter = clickCounter + 1">Click Me!</button></td>
         </tr>
       </table>
-    </div>
+    </div> -->
 
     <div class="table-responsive">
       <table class="table table-bordered">
@@ -44,7 +48,7 @@
           <tr ng-repeat="school in schools">
             <td>{{ school.name }}</td>
             <td>{{ school.location }}</td>
-            <td><img id="school-logo" src="{{ school.logo }}" alt="this school's logo"/></td>
+            <td><img id="logo" src="{{ school.logo }}" alt="this school's logo"/></td>
           </tr>
         </tbody>
       </table>
