@@ -7,18 +7,22 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-controller="dataController">
-    <div>
+  <body>
+
+    <div class="page-header">
       <h1 id="title">Big Ten Schools</h1>
       <h2 id="description">"The Official Angular App of the Big Ten"</h2>
     </div>
     <div class="welcome">
       <p>Enter Your Name: <input type="text" class="input" ng-model="name"/></p>
-      <p>Hello <span ng-bind="name"></span>, welcome to the Big Ten Schools App!</p>
+      <p id="hello">Hello <span ng-bind="name"></span>, Welcome to the Big Ten Schools App!</p>
     </div>
-    <div>
+    <!-- <div> -->
       <!-- <table border="0">
         <tr>
           <td><input type="checkbox" ng-model="enableDisableButton">Disable Button</td>
@@ -35,7 +39,9 @@
       </table>
     </div> -->
 
-    <div class="table-responsive">
+    <div class="table-responsive" ng-controller="dataController">
+      <h3>Big Ten Schools Table:</h3>
+      <p><span ng-bind="name"></span>, type to search for your favorite Big Ten School:<input type="text" ng-model="searchText" /></p>
       <table class="table table-bordered">
         <thead>
           <tr class="info">
@@ -45,7 +51,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="school in schools">
+          <tr ng-repeat="school in schools | filter:searchText | orderBy: 'name'">
             <td>{{ school.name }}</td>
             <td>{{ school.location }}</td>
             <td><img id="logo" src="{{ school.logo }}" alt="this school's logo"/></td>
@@ -54,7 +60,10 @@
       </table>
     </div>
 
-    <!-- <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options">
-    </canvas> -->
+    <div ng-controller="pieController">
+      <h3 id="pie-title">Number of National Championships</h3>
+      <canvas id="pie" class="chart chart-pie" chart-data="data" chart-colors="colors" chart-labels="labels" chart-options="options"></canvas>
+    </div>
+
   </body>
 </html>

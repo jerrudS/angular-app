@@ -25,16 +25,34 @@ body {
 }
 
 .welcome {
+  font-size: 16px;
+  background-color: light-grey;
+  margin-top: 20px;
   margin-left: 50%;
   transform: translateX(-24%);
 }
 
-.table {
+#hello {
+  transform: translateX(-5%);
+}
+
+.table-responsive {
   margin: 0 auto;
   width: 800px;
+}
+
+.table-bordered {
+  margin-top: 15px;
 }
 
 #logo {
   width: 65px;
   height: 55px;
+}
+
+#pie-title {
+  margin-left: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transform: translateX(-30%);
 }
