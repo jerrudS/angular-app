@@ -4,7 +4,7 @@ angular.
       template:
         '<div class="table-responsive">' +
           '<h3>Big Ten Schools Table:</h3>' +
-          '<p><span ng-bind="name"></span>, type to search for your favorite Big Ten School:<input type="text" ng-model="searchText" /></p>' +
+          '<p>Type to search for your favorite Big Ten School:<input type="text" ng-model="searchText" /></p>' +
           '<table class="table table-bordered">' +
             '<thead>' +
               '<tr class="info">' +
