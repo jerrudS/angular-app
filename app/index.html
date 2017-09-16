@@ -1,19 +1,21 @@
 <!doctype html>
-<html ng-app="myModule">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Big Ten Schools</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
     <script src="app.js"></script>
-    <script src="schools-table.component.js"></script>
+    <script src="schools/table.component.js"></script>
+    <script src="schools/pie-chart.component.js"></script>
+
   </head>
-  <body>
+  <body ng-app="myModule">
 
     <div class="page-header">
       <h1 id="title">Big Ten Schools</h1>
@@ -23,48 +25,9 @@
       <p>Enter Your Name: <input type="text" class="input" ng-model="name"/></p>
       <p id="hello">Hello <span ng-bind="name"></span>, Welcome to the Big Ten Schools App!</p>
     </div>
-    <!-- <div> -->
-      <!-- <table border="0">
-        <tr>
-          <td><input type="checkbox" ng-model="enableDisableButton">Disable Button</td>
-          <td><button type="button" class="btn btn-primary" ng-disabled="enableDisableButton">Click Me!</button></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" ng-model="showHide">Show Button</td>
-          <td><button type="button" class="btn btn-primary" ng-show="showHide">Click Me!</button></td>
-        </tr>
-        <tr>
-          <td><p>Total Click: {{ clickCounter }}</p></td>
-          <td><button type="button" class="btn btn-primary" ng-click="clickCounter = clickCounter + 1">Click Me!</button></td>
-        </tr>
-      </table>
-    </div> -->
+
     <schools-table></schools-table>
-    <!-- <div class="table-responsive" ng-controller="dataController">
-      <h3>Big Ten Schools Table:</h3>
-      <p><span ng-bind="name"></span>, type to search for your favorite Big Ten School:<input type="text" ng-model="searchText" /></p>
-      <table class="table table-bordered">
-        <thead>
-          <tr class="info">
-            <th>School Name</th>
-            <th>Location</th>
-            <th>Logo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="school in schools | filter:searchText | orderBy: 'name'">
-            <td>{{ school.name }}</td>
-            <td>{{ school.location }}</td>
-            <td><img id="logo" src="{{ school.logo }}" alt="this school's logo"/></td>
-          </tr>
-        </tbody>
-      </table>
-    </div> -->
+    <pie-chart></pie-chart>
 
-    <!-- <div ng-controller="pieController">
-      <h3 id="pie-title">Number of National Championships</h3>
-      <canvas id="pie" class="chart chart-pie" chart-data="data" chart-colors="colors" chart-labels="labels" chart-options="options"></canvas>
-    </div> -->
-
-  </body>
+    </body>
 </html>
