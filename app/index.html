@@ -11,6 +11,7 @@
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
     <script src="app.js"></script>
+    <script src="schools-table.component.js"></script>
   </head>
   <body>
 
@@ -38,8 +39,8 @@
         </tr>
       </table>
     </div> -->
-
-    <div class="table-responsive" ng-controller="dataController">
+    <schools-table></schools-table>
+    <!-- <div class="table-responsive" ng-controller="dataController">
       <h3>Big Ten Schools Table:</h3>
       <p><span ng-bind="name"></span>, type to search for your favorite Big Ten School:<input type="text" ng-model="searchText" /></p>
       <table class="table table-bordered">
@@ -58,12 +59,12 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
 
-    <div ng-controller="pieController">
+    <!-- <div ng-controller="pieController">
       <h3 id="pie-title">Number of National Championships</h3>
       <canvas id="pie" class="chart chart-pie" chart-data="data" chart-colors="colors" chart-labels="labels" chart-options="options"></canvas>
-    </div>
+    </div> -->
 
   </body>
 </html>
