@@ -3,7 +3,7 @@ angular.
   component('schoolsTable', {
       template:
         '<div class="table-responsive">' +
-          '<h3>Big Ten Schools Table:</h3>' +
+          '<h3 id="table-title">Big Ten Schools Table</h3>' +
           '<p>Type to search for your favorite Big Ten School:<input type="text" ng-model="searchText" /></p>' +
           '<table class="table table-bordered">' +
             '<thead>' +

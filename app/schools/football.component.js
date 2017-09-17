@@ -1,7 +1,15 @@
+const authentication = require('../authentication')
+const apikey = authentication.api_key
+
 function returnFootball(articlesObject) {
-  const articlesArray = articlesObject.data.response.docs
-  const footballArticles = articlesArray.filter(item => {
-    return item.section_name == 'College Football'
+  const articlesArray = articlesObject.data.results
+  const footballArticles = articlesArray.map(item => {
+    return {
+      topic: item.subsection,
+      title: item.title,
+      abstract: item.abstract,
+      url: item.short_url
+    }
   })
   return footballArticles
 }
@@ -11,9 +19,17 @@ angular.
   controller('footballController', function ($scope, $http) {
     $http({
       method: 'GET',
-      url: 'https://api.nytimes.com/svc/search/v2/articlesearch.json?apikey=2f7492be6cb34d96a6dd00a0c41cddb6',
+      url: 'https://api.nytimes.com/svc/topstories/v2/sports.json?apikey=' + apikey,
         }).then(function successCallback(response) {
-          console.log(returnFootball(response))
+          const data = returnFootball(response)
+          const dataObj = data.map(item => {
+            return {
+              title: item.title,
+              abstract: item.abstract,
+              url: item.url
+            }
+          })
+          $scope.data = dataObj
         },
         function errorCallback(response) {
           console.log(response)

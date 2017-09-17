@@ -16,33 +16,43 @@ body {
 
 #title {
   margin-left: 50%;
-  transform: translateX(-20%);
+  transform: translateX(-44%);
 }
 
 #description {
   margin-left: 50%;
-  transform: translateX(-45%);
+  transform: translateX(-30%);
 }
 
 .welcome {
   font-size: 16px;
   background-color: light-grey;
-  margin-top: 20px;
-  margin-left: 50%;
-  transform: translateX(-24%);
+  margin: 45px 30% 0;
+}
+
+#enter {
+  margin-left: 10%;
 }
 
 #hello {
+  margin-left: 10%;
   transform: translateX(-5%);
 }
 
 .table-responsive {
   margin: 0 auto;
-  width: 800px;
+  width: 900px;
 }
 
 .table-bordered {
   margin-top: 15px;
+}
+
+#table-title {
+  margin-left: 50%;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  transform: translateX(-30%);
 }
 
 #logo {
@@ -54,5 +64,27 @@ body {
   margin-left: 50%;
   margin-top: 50px;
   margin-bottom: 50px;
-  transform: translateX(-30%);
+  transform: translateX(-47%);
+}
+
+#news {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  margin-left: 50%;
+  transform: translateX(-25%);
+}
+
+.jumbotron {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#article-title {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.jumbotron p {
+  font-size: 16px;
+  margin-top: 15px;
 }

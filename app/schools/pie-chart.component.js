@@ -3,7 +3,7 @@ angular.
   component('pieChart', {
     template:
       '<div>' +
-        '<h3 id="pie-title">Number of National Championships</h3>' +
+        '<h3 id="pie-title">Number of National Championships: Big Ten Schools</h3>' +
         '<canvas id="pie" class="chart chart-pie" chart-data="$ctrl.data" chart-colors="$ctrl.colors" chart-labels="$ctrl.labels" chart-options="options"></canvas>' +
       '</div>',
     controller: function PieChartController() {
