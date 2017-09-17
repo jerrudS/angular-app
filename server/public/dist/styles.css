@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  margin: 40px;
+  background: url('/images/blue-background.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#title {
+  margin-left: 50%;
+  transform: translateX(-44%);
+}
+
+#description {
+  margin-left: 50%;
+  transform: translateX(-30%);
+}
+
+.welcome {
+  font-size: 16px;
+  background-color: light-grey;
+  margin: 45px 30% 0;
+}
+
+#enter {
+  margin-left: 10%;
+}
+
+#hello {
+  margin-left: 10%;
+  transform: translateX(-5%);
+}
+
+.table-responsive {
+  margin: 0 auto;
+  width: 900px;
+}
+
+.table-bordered {
+  margin-top: 15px;
+}
+
+#table-title {
+  margin-left: 50%;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  transform: translateX(-30%);
+}
+
+#logo {
+  width: 65px;
+  height: 55px;
+}
+
+#pie-title {
+  margin-left: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transform: translateX(-47%);
+}
+
+#news {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  margin-left: 50%;
+  transform: translateX(-25%);
+}
+
+.jumbotron {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#article-title {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.jumbotron p {
+  font-size: 16px;
+  margin-top: 15px;
+}

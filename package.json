@@ -1,15 +1,25 @@
 {
   "name": "angular-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.2.1"
+  },
   "description": "angular application",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "server/app.js",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "chart.js": "^2.7.0",
+    "watchify": "^3.9.0"
+  },
   "devDependencies": {
-    "http-server": "^0.10.0"
+    "angular": "^1.6.6",
+    "browserify": "^14.4.0"
   },
   "scripts": {
-    "start": "http-server ./app -a localhost -p 8079",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/app.js",
+    "bundle": "browserify app/app.js -o server/public/dist/bundle.js",
+    "watch": "watchify app/app.js -o server/public/dist/bundle.js",
+    "postinstall": "npm run bundle"
   },
   "repository": {
     "type": "git",
