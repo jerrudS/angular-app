@@ -1,5 +1,3 @@
-// var chart = require('./schools/')
-
 var angular = require('angular')
 require('chart.js')
 require('angular-chart.js')
