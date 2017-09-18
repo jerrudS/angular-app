@@ -10,6 +10,7 @@
     "angular-chart.js": "^1.1.1",
     "chart.js": "^2.7.0",
     "dotenv": "^4.0.0",
+    "express": "^4.15.4",
     "watchify": "^3.9.0"
   },
   "devDependencies": {
