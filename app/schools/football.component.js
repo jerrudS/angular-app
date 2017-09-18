@@ -1,4 +1,6 @@
 const apikey = process.env.API_KEY
+console.log(process.env.API_KEY)
+console.log(apikey)
 
 function returnFootball(articlesObject) {
   const articlesArray = articlesObject.data.results
