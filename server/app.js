@@ -11,7 +11,7 @@ app.get('/articles', (req, res) => {
   request('https://api.nytimes.com/svc/topstories/v2/sports.json?apikey=' + process.env.API_KEY, (error, response, body) => {
     console.log('error:', error)
     console.log('statusCode:', response && response.statusCode)
-    res.send(body)
+    res.send(JSON.parse(body))
   })
 })
 
