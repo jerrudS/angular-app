@@ -18,6 +18,7 @@ angular.
       method: 'GET',
       url: '/articles',
         }).then(function successCallback(response) {
+          console.log(response.data.results)
           const data = returnFootball(response)
           const dataObj = data.map(item => {
             return {
