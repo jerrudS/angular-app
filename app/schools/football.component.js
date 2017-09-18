@@ -1,16 +1,3 @@
-function returnFootball(articlesObject) {
-  const articlesArray = articlesObject.data.results
-  const footballArticles = articlesArray.map(item => {
-    return {
-      topic: item.subsection,
-      title: item.title,
-      abstract: item.abstract,
-      url: item.short_url
-    }
-  })
-  return footballArticles
-}
-
 angular.
   module('myModule').
   controller('footballController', function ($scope, $http) {
@@ -18,8 +5,7 @@ angular.
       method: 'GET',
       url: '/articles',
         }).then(function successCallback(response) {
-          console.log(response.data.results)
-          const data = returnFootball(response)
+          const data = response.data
           const dataObj = data.map(item => {
             return {
               title: item.title,
