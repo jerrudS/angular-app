@@ -9,7 +9,6 @@ app.use(bodyParser.json())
 
 function returnWanted(articlesObject) {
   const articlesArray = articlesObject.results
-  console.log(articlesObject)
   console.log(articlesArray)
   const sportsArticles = articlesArray.map(item => {
     return {
