@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 function returnFootball(articlesObject) {
   const articlesArray = articlesObject.data.results
   const footballArticles = articlesArray.map(item => {
