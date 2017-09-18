@@ -7,9 +7,11 @@ const app = express()
 app.use(express.static('./server/public/dist/'))
 app.use(bodyParser.json())
 
-function returnFootball(articlesObject) {
+function returnWanted(articlesObject) {
   const articlesArray = articlesObject.results
-  const footballArticles = articlesArray.map(item => {
+  console.log(articlesObject)
+  console.log(articlesArray)
+  const sportsArticles = articlesArray.map(item => {
     return {
       topic: item.subsection,
       title: item.title,
@@ -17,14 +19,14 @@ function returnFootball(articlesObject) {
       url: item.short_url
     }
   })
-  return footballArticles
+  return sportsArticles
 }
 
 app.get('/articles', (req, res) => {
   request('https://api.nytimes.com/svc/topstories/v2/sports.json?apikey=' + process.env.API_KEY, (error, response, body) => {
     console.log('error:', error)
     console.log('statusCode:', response && response.statusCode)
-    res.send(returnFootball(JSON.parse(body)))
+    res.send(returnWanted(JSON.parse(body)))
   })
 })
 
