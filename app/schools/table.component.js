@@ -17,7 +17,7 @@ angular.
               '<tr ng-repeat="school in $ctrl.schools | filter:searchText | orderBy: \'name\'">' +
                 '<td>{{ school.name }}</td>' +
                 '<td>{{ school.location }}</td>' +
-                '<td><img id="logo" ng-src="{{ school.logo }}" alt="this school\'s logo"/></td>' +
+                '<td><img class="img-responsive" id="logo" ng-src="{{ school.logo }}" alt="this school\'s logo"/></td>' +
               '</tr>' +
             '</tbody>' +
           '</table>' +

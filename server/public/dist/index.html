@@ -17,7 +17,7 @@
     </div>
     <div class="jumbotron welcome">
       <p id="enter">Enter Your Name: <input type="text" class="input" ng-model="name"/></p>
-      <p id="hello">Hello <span ng-bind="name"></span>, Welcome to the Big Ten Schools App!</p>
+      <p id="hello" ng-show="name">Hello <span ng-bind="name"></span>, Welcome to the Big Ten Schools App!</p>
     </div>
     <schools-table></schools-table>
     <pie-chart></pie-chart>
