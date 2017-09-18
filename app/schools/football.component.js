@@ -1,7 +1,3 @@
-const apikey = process.env.API_KEY
-console.log(process.env.API_KEY)
-console.log(apikey)
-
 function returnFootball(articlesObject) {
   const articlesArray = articlesObject.data.results
   const footballArticles = articlesArray.map(item => {
@@ -20,7 +16,7 @@ angular.
   controller('footballController', function ($scope, $http) {
     $http({
       method: 'GET',
-      url: 'https://api.nytimes.com/svc/topstories/v2/sports.json?apikey=' + apikey,
+      url: '/articles',
         }).then(function successCallback(response) {
           const data = returnFootball(response)
           const dataObj = data.map(item => {
