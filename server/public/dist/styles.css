@@ -27,16 +27,19 @@ body {
 .welcome {
   font-size: 16px;
   background-color: light-grey;
-  margin: 45px 30% 0;
+  width: 400px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 #enter {
-  margin-left: 10%;
+  margin-left: 50%;
+  transform: translateX(-30%);
 }
 
 #hello {
-  margin-left: 10%;
-  transform: translateX(-5%);
+  margin-left: 50%;
+  transform: translateX(-35%);
 }
 
 .table-responsive {
@@ -52,7 +55,7 @@ body {
   margin-left: 50%;
   margin-top: 50px;
   margin-bottom: 35px;
-  transform: translateX(-30%);
+  transform: translateX(-32%);
 }
 
 #logo {
@@ -72,6 +75,10 @@ body {
   margin-bottom: 50px;
   margin-left: 50%;
   transform: translateX(-25%);
+}
+
+.input {
+  margin-right: 10%;
 }
 
 .jumbotron {

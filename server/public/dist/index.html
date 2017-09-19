@@ -10,25 +10,26 @@
 
   </head>
   <body ng-app="myModule">
-    <div ng-controller="footballController">{{ response }}</div>
     <div class="page-header">
       <h1 id="title">Big Ten Schools and Sports News</h1>
       <h2 id="description">"The Official Angular App"</h2>
     </div>
-    <div class="jumbotron welcome">
-      <p id="enter">Enter Your Name: <input type="text" class="input" ng-model="name"/></p>
-      <p id="hello" ng-show="name">Hello <span ng-bind="name"></span>, Welcome to the Big Ten Schools App!</p>
-    </div>
+
+    <form-element></form-element>
+
     <schools-table></schools-table>
+
     <pie-chart></pie-chart>
+
     <div>
       <h3 id="news">Recent Top Sports Stories</h3>
-      <div ng-controller="footballController">
+      <div ng-controller="articlesController">
         <h4 ng-repeat="article in data" class="jumbotron"><p id="article-title">{{ article.title }}</p>
           <p class="abstract">{{ article.abstract }}</p>
           <a href="{{ article.url }}">Read More</a>
         </h4>
       </div>
     </div>
+
   </body>
 </html>

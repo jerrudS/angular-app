@@ -1,6 +1,6 @@
 angular.
   module('myModule').
-  controller('footballController', function ($scope, $http) {
+  controller('articlesController', function ($scope, $http) {
     $http({
       method: 'GET',
       url: '/articles',

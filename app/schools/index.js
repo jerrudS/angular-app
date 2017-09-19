@@ -1,3 +1,4 @@
 require('./pie-chart.component.js')
 require('./table.component.js')
-require('./football.component.js')
+require('./articles.component.js')
+require('./form.component.js')
