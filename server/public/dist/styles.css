@@ -14,14 +14,9 @@ body {
   background-size: cover;
 }
 
-#title {
-  margin-left: 50%;
-  transform: translateX(-44%);
-}
-
+#title,
 #description {
-  margin-left: 50%;
-  transform: translateX(-30%);
+  text-align: center;
 }
 
 .welcome {
@@ -30,16 +25,6 @@ body {
   width: 400px;
   margin-left: 50%;
   transform: translateX(-50%);
-}
-
-#enter {
-  margin-left: 50%;
-  transform: translateX(-30%);
-}
-
-#hello {
-  margin-left: 50%;
-  transform: translateX(-35%);
 }
 
 .table-responsive {
@@ -64,17 +49,15 @@ body {
 }
 
 #pie-title {
-  margin-left: 50%;
   margin-top: 50px;
   margin-bottom: 50px;
-  transform: translateX(-47%);
+  text-align: center;
 }
 
 #news {
   margin-top: 80px;
   margin-bottom: 50px;
-  margin-left: 50%;
-  transform: translateX(-25%);
+  text-align: center;
 }
 
 .input {
